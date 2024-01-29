@@ -13,4 +13,4 @@ string nome = "Tiago";
 string sobrenome = "Nobre.";
 Console.WriteLine(nome);
 Console.WriteLine(sobrenome);
-Console.WriteLine("Instrutores do curso: Guilherme e Daniel Portugal.");  
+Console.WriteLine("Instrutores do curso: Guilherme Lima e Daniel Portugal.");  
