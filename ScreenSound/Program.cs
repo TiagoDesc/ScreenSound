@@ -10,8 +10,7 @@ Console.WriteLine(mensagemBoasVindas);
 string curso = "C#: criando sua primeira aplicação C#: criando sua primeira aplicação";
 Console.WriteLine(curso);
 string nome = "Tiago";
-string sobrenome = "Nobre";
+string sobrenome = "Nobre.";
 Console.WriteLine(nome);
 Console.WriteLine(sobrenome);
-Console.WriteLine("Instrutores do curso: Guilherme e Daniel Portugal.");  
-//test2
+Console.WriteLine("Instrutores do curso: Guilherme e Daniel Portugal.");
