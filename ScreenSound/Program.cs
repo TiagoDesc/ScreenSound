@@ -14,8 +14,3 @@ string sobrenome = "Nobre.";
 Console.WriteLine(nome);
 Console.WriteLine(sobrenome);
 Console.WriteLine("Instrutores do curso: Guilherme e Daniel Portugal.");  
-<<<<<<<<< Temporary merge branch 1
-//test
-=========
-//test2
->>>>>>>>> Temporary merge branch 2
