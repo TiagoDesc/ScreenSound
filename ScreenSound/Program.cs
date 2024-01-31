@@ -21,6 +21,5 @@ string curso = "C#: criando sua primeira aplicação C#: criando sua primeira ap
 Console.WriteLine(curso);
 string nome = "Tiago";
 string sobrenome = "Nobre.";
-Console.WriteLine(nome);
-Console.WriteLine(sobrenome);
+Console.WriteLine(nome + " " + sobrenome);
 Console.WriteLine("Instrutores do curso: Guilherme Lima e Daniel Portugal.");  
