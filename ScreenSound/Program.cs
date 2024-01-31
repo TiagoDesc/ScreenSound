@@ -1,13 +1,15 @@
 ﻿// ScreenSound 
 
+string mensagemBoasVindas = "Boas vindas ao Screen Sound.";
+
 void ExibirMensagem()
 {
-    Console.WriteLine("************************************");
-    string mensagemBoasVindas = "Boas vindas ao Screen Sound.";
+    Console.WriteLine("\r\n░██████╗░█████╗░██████╗░███████╗███████╗███╗░░██╗  ░██████╗░█████╗░██╗░░░██╗███╗░░██╗██████╗░\r\n██╔════╝██╔══██╗██╔══██╗██╔════╝██╔════╝████╗░██║  ██╔════╝██╔══██╗██║░░░██║████╗░██║██╔══██╗\r\n╚█████╗░██║░░╚═╝██████╔╝█████╗░░█████╗░░██╔██╗██║  ╚█████╗░██║░░██║██║░░░██║██╔██╗██║██║░░██║\r\n░╚═══██╗██║░░██╗██╔══██╗██╔══╝░░██╔══╝░░██║╚████║  ░╚═══██╗██║░░██║██║░░░██║██║╚████║██║░░██║\r\n██████╔╝╚█████╔╝██║░░██║███████╗███████╗██║░╚███║  ██████╔╝╚█████╔╝╚██████╔╝██║░╚███║██████╔╝\r\n╚═════╝░░╚════╝░╚═╝░░╚═╝╚══════╝╚══════╝╚═╝░░╚══╝  ╚═════╝░░╚════╝░░╚═════╝░╚═╝░░╚══╝╚═════╝░");
     Console.WriteLine(mensagemBoasVindas);
-    Console.WriteLine("************************************");
-
+    
 }
+
+ExibirMensagem();
 
 // Criar uma variável chamada curso, e guarde nela o nome do curso estudado.
 // Mostrar o conteúdo da variável curso no console.
