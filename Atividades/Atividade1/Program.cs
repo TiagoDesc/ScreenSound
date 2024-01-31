@@ -19,7 +19,7 @@ if(notaMedia >= 5)
     
 
 
-    // 2, 3 , 4.
+    // 2, 3 and 4.
     List<string> linguagens = new List<string> {"C#", "Java", "JavaScript"};
     Console.WriteLine(linguagens[0]);
     Console.Write("Digite um número inteiro para obter a n-ésima posição da lista: ");
