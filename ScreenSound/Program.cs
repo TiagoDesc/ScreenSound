@@ -1,5 +1,7 @@
 ﻿// ScreenSound 
 
+using System.ComponentModel;
+
 string mensagemBoasVindas = "Boas vindas ao Screen Sound.";
 
 void ExibirMensagem()
@@ -27,9 +29,24 @@ void ExibirOpcoesMenu()
     string opcaoEscolhida = Console.ReadLine()!;
     int opcaoNumericaEscolhida = int.Parse(opcaoEscolhida);
 
-    if (opcaoNumericaEscolhida == 1)
+    switch (opcaoNumericaEscolhida)
     {
-        Console.WriteLine("Você digitou a opção: " + opcaoNumericaEscolhida);
+        case 1: Console.WriteLine("Você escolheu a opção: " + opcaoNumericaEscolhida);
+            break;
+        case 2: Console.WriteLine("Você escolheu a opção: " + opcaoNumericaEscolhida);
+            break;
+        case 3: Console.WriteLine("Você escolheu a opção: " + opcaoNumericaEscolhida);
+            break;
+        case 4: Console.WriteLine("Você escolheu a opção: " + opcaoNumericaEscolhida);
+            break;
+        case -1: Console.WriteLine("Adeus!");
+            break;
+        default: Console.WriteLine("Opção inválida.");
+            break;
+
+
+
+
     }
 }
 
