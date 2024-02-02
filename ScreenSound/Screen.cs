@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Threading;
 
 string mensagemBoasVindas = "Boas vindas ao Screen Sound.";
-List<string> listaDasBandas = new List<string>();
+List<string> listaDasBandas = new List<string> {"Marrom 5", "Cold Play", "Arctic Monkeys"};
 
 void ExibirLogo()
 {
@@ -38,7 +38,7 @@ void ExibirOpcoesMenu()
             RegistrarBanda();
             break;
         case 2:
-            Console.WriteLine("Você escolheu a opção: " + opcaoNumericaEscolhida);
+            MostrarBandasRegistradas();
             break;
         case 3:
             Console.WriteLine("Você escolheu a opção: " + opcaoNumericaEscolhida);
@@ -66,6 +66,23 @@ void RegistrarBanda()
     Thread.Sleep(2000);
     Console.Clear();
     ExibirOpcoesMenu();
+}
+
+void MostrarBandasRegistradas()
+{
+    Console.Clear();
+    Console.WriteLine("***************************");
+    Console.WriteLine("Exibindo as bandas registradas: ");
+    Console.WriteLine("***************************");
+    for(int i = 0; i < listaDasBandas.count; i++)
+    {
+        Console.WriteLine($"Banda: {listaDasBandas[i]}");
+    }
+    Console.Write("\nDigite uma tecla para voltar ao menu principal: ");
+    Console.ReadKey();
+    Console.Clear();
+    }
+
 }
 
 ExibirLogo();
