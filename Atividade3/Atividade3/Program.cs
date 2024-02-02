@@ -14,3 +14,7 @@
     }
 
 } while (true);
+
+// Aleatory mode: 
+// Random randomNumber = new Random();
+// int secretNumber = randomm.Next(1, 101);
