@@ -2,7 +2,7 @@
 {
     int secretNumber = 42;
     Console.Write("Enter the number between 1 and 100: ");
-    int number = int.Parse(console.readLine());
+    int number = int.Parse(Console.ReadLine());
 
     if (number == secretNumber){
         Console.WriteLine("Congratulations, you got the number right!");
