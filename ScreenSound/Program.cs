@@ -6,7 +6,7 @@ using System.Threading;
 
 string mensagemBoasVindas = "Boas vindas ao Screen Sound.";
 
-void ExibirMensagem()
+void ExibirLogo()
 {
     Console.WriteLine(@"
 ░██████╗░█████╗░██████╗░███████╗███████╗███╗░░██╗  ░██████╗░█████╗░██╗░░░██╗███╗░░██╗██████╗░
@@ -55,9 +55,11 @@ void RegistrarBanda()
     Console.Write("Digite o nome da banda que você deseja registrar: ");
     string nomeDaBanda = Console.ReadLine()!;
     Console.WriteLine($"A banda {nomeDaBanda} foi registrada com sucesso!");
-    Thread.Sleep(2000);
+    Thread.Sleep(2000); 
+    Console.Clear();
+    ExibirOpcoesMenu();
 }
 
-ExibirMensagem();
+ExibirLogo();
 ExibirOpcoesMenu();
 
