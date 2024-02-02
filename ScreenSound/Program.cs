@@ -1,6 +1,8 @@
 ﻿// ScreenSound 
 
+using System;
 using System.ComponentModel;
+using System.Threading;
 
 string mensagemBoasVindas = "Boas vindas ao Screen Sound.";
 
@@ -31,7 +33,7 @@ void ExibirOpcoesMenu()
 
     switch (opcaoNumericaEscolhida)
     {
-        case 1: Console.WriteLine("Você escolheu a opção: " + opcaoNumericaEscolhida);
+        case 1: RegistrarBanda();
             break;
         case 2: Console.WriteLine("Você escolheu a opção: " + opcaoNumericaEscolhida);
             break;
@@ -43,11 +45,17 @@ void ExibirOpcoesMenu()
             break;
         default: Console.WriteLine("Opção inválida.");
             break;
-
-
-
-
     }
+}
+
+void RegistrarBanda()
+{
+    Console.Clear();
+    Console.WriteLine("*- RESGISTRO DE BANDAS -*");
+    Console.Write("Digite o nome da banda que você deseja registrar: ");
+    string nomeDaBanda = Console.ReadLine()!;
+    Console.WriteLine($"A banda {nomeDaBanda} foi registrada com sucesso!");
+    Thread.Sleep(2000)
 }
 
 ExibirMensagem();
