@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Threading;
 
 string mensagemBoasVindas = "Boas vindas ao Screen Sound.";
-List<string> listaDasBandas = new List<string>(); 
+List<string> listaDasBandas = new List<string> { "Marrom 5", "Cold Play", "Arctic Monkeys" };
 
 void ExibirLogo()
 {
@@ -17,7 +17,7 @@ void ExibirLogo()
 ██████╔╝╚█████╔╝██║░░██║███████╗███████╗██║░╚███║  ██████╔╝╚█████╔╝╚██████╔╝██║░╚███║██████╔╝
 ╚═════╝░░╚════╝░╚═╝░░╚═╝╚══════╝╚══════╝╚═╝░░╚══╝  ╚═════╝░░╚════╝░░╚═════╝░╚═╝░░╚══╝╚═════╝░");
     Console.WriteLine(mensagemBoasVindas);
-    
+
 }
 
 void ExibirOpcoesMenu()
@@ -34,17 +34,23 @@ void ExibirOpcoesMenu()
 
     switch (opcaoNumericaEscolhida)
     {
-        case 1: RegistrarBanda();
+        case 1:
+            RegistrarBanda();
             break;
-        case 2: Console.WriteLine("Você escolheu a opção: " + opcaoNumericaEscolhida);
+        case 2:
+            MostrarBandasRegistradas();
             break;
-        case 3: Console.WriteLine("Você escolheu a opção: " + opcaoNumericaEscolhida);
+        case 3:
+            Console.WriteLine("Você escolheu a opção: " + opcaoNumericaEscolhida);
             break;
-        case 4: Console.WriteLine("Você escolheu a opção: " + opcaoNumericaEscolhida);
+        case 4:
+            Console.WriteLine("Você escolheu a opção: " + opcaoNumericaEscolhida);
             break;
-        case -1: Console.WriteLine("Adeus!");
+        case -1:
+            Console.WriteLine("Adeus!");
             break;
-        default: Console.WriteLine("Opção inválida.");
+        default:
+            Console.WriteLine("Opção inválida.");
             break;
     }
 }
@@ -57,10 +63,27 @@ void RegistrarBanda()
     string nomeDaBanda = Console.ReadLine()!;
     listaDasBandas.Add(nomeDaBanda);
     Console.WriteLine($"A banda {nomeDaBanda} foi registrada com sucesso!");
-    Thread.Sleep(2000); 
+    Thread.Sleep(2000);
     Console.Clear();
     ExibirOpcoesMenu();
 }
+
+void MostrarBandasRegistradas()
+{
+    Console.Clear();
+    Console.WriteLine("***************************");
+    Console.WriteLine("Exibindo as bandas registradas: ");
+    Console.WriteLine("***************************");
+    for (int i = 0; i < listaDasBandas.Count; i++)
+    {
+        Console.WriteLine($"Banda: {listaDasBandas[i]}");
+    }
+    Console.Write("\nDigite uma tecla para voltar ao menu principal: ");
+    Console.ReadKey();
+    Console.Clear();
+    ExibirOpcoesMenu();
+}
+
 
 ExibirLogo();
 ExibirOpcoesMenu();
