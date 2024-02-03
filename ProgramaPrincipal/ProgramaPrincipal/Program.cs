@@ -5,7 +5,9 @@ using System.ComponentModel;
 using System.Threading;
 
 string mensagemBoasVindas = "Boas vindas ao Screen Sound.";
-List<string> listaDasBandas = new List<string> { "Marrom 5", "Cold Play", "Arctic Monkeys" };
+//List<string> listaDasBandas = new List<string> { "Marrom 5", "Cold Play", "Arctic Monkeys" };
+
+Dictionary<string, List<int>> bandasRegistradas = new Dictionary<string, List<int>>();
 
 void ExibirLogo()
 {
@@ -58,7 +60,7 @@ void ExibirOpcoesMenu()
 void RegistrarBanda()
 {
     Console.Clear();
-    Console.WriteLine("RESGISTRO DE BANDAS");
+    ExibirTituloDaOpcao("Registro das bandas");
     Console.Write("Digite o nome da banda que você deseja registrar: ");
     string nomeDaBanda = Console.ReadLine()!;
     listaDasBandas.Add(nomeDaBanda);
@@ -71,9 +73,7 @@ void RegistrarBanda()
 void MostrarBandasRegistradas()
 {
     Console.Clear();
-    Console.WriteLine("***************************");
-    Console.WriteLine("Exibindo as bandas registradas: ");
-    Console.WriteLine("***************************");
+    ExibirTituloDaOpcao("Exibindo todas as bandas registradas na nossa aplicação: ");
     /**for (int i = 0; i < listaDasBandas.Count; i++)
     {
         Console.WriteLine($"Banda: {listaDasBandas[i]}");
@@ -90,6 +90,15 @@ void MostrarBandasRegistradas()
     ExibirOpcoesMenu();
 }
 
+void ExibirTituloDaOpcao(string titulo)
+{
+    Console.Clear();
+    int quatidadeDeLetras = titulo.Length;
+    string asteriscos = string.Empty.PadLeft(quatidadeDeLetras, '*');
+    Console.WriteLine(asteriscos);
+    Console.WriteLine(titulo);
+    Console.WriteLine(asteriscos);
+}
 
 ExibirLogo();
 ExibirOpcoesMenu();
