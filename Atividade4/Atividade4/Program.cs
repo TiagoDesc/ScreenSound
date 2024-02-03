@@ -54,3 +54,22 @@ for(int i = 0; i < numeros.Count; i++)
 }
 
 Console.WriteLine($"A soma dos números: {soma}");
+
+Console.WriteLine("***********************");
+
+List<int> pares = new List<int>();
+
+Console.WriteLine("Digite o tamanho da lista: ");
+string tamanho = Console.ReadLine()!;
+int tamanhoEscolhido = int.Parse(tamanho);
+
+for(int i = 0; i < tamanhoEscolhido; i++)
+{
+    Console.WriteLine("Digite um número: ");
+    string numero = Console.ReadLine()!;
+    int numeroEscolhido = int.Parse(numero);
+    if(numeroEscolhido % 2 == 0) {
+        Console.WriteLine(numeroEscolhido);
+    }
+}
+
