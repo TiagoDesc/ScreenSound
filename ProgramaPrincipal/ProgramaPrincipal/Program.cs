@@ -8,7 +8,8 @@ string mensagemBoasVindas = "Boas vindas ao Screen Sound.";
 //List<string> listaDasBandas = new List<string> { "Marrom 5", "Cold Play", "Arctic Monkeys" };
 
 Dictionary<string, List<int>> bandasRegistradas = new Dictionary<string, List<int>>();
-
+bandasRegistradas.Add("Link Park", new List<int> { 10, 8, 6 });
+bandasRegistradas.Add("The beatles", new List<int>());
 void ExibirLogo()
 {
     Console.WriteLine(@"
@@ -43,7 +44,7 @@ void ExibirOpcoesMenu()
             MostrarBandasRegistradas();
             break;
         case 3:
-            Console.WriteLine("Você escolheu a opção: " + opcaoNumericaEscolhida);
+            AvaliarUmaBanda();
             break;
         case 4:
             Console.WriteLine("Você escolheu a opção: " + opcaoNumericaEscolhida);
@@ -63,7 +64,7 @@ void RegistrarBanda()
     ExibirTituloDaOpcao("Registro das bandas");
     Console.Write("Digite o nome da banda que você deseja registrar: ");
     string nomeDaBanda = Console.ReadLine()!;
-    listaDasBandas.Add(nomeDaBanda);
+    bandasRegistradas.Add(nomeDaBanda, new List<int>());
     Console.WriteLine($"A banda {nomeDaBanda} foi registrada com sucesso!");
     Thread.Sleep(2000);
     Console.Clear();
@@ -79,7 +80,7 @@ void MostrarBandasRegistradas()
         Console.WriteLine($"Banda: {listaDasBandas[i]}");
     }**/
 
-    foreach(string banda in listaDasBandas)
+    foreach(string banda in bandasRegistradas.Keys)
     {
         Console.WriteLine($"Banda: {banda}");
     }
@@ -98,6 +99,26 @@ void ExibirTituloDaOpcao(string titulo)
     Console.WriteLine(asteriscos);
     Console.WriteLine(titulo);
     Console.WriteLine(asteriscos);
+}
+
+void AvaliarUmaBanda()
+{
+    Console.Clear();
+    ExibirTituloDaOpcao("Avaliar Banda");
+    Console.Write("Digite o nome da banda que deseja avaliar: ");
+    string nomeDabanda = Console.ReadLine()!;
+    if (bandasRegistradas.ContainsKey(nomeDabanda))
+    {
+
+    }
+    else
+    {
+        Console.WriteLine($"A banda {nomeDabanda} não foi encontrada!");
+        Console.WriteLine("Digite uma tecla para voltar ao menu principal: ");
+        Console.ReadKey();
+        Console.Clear();
+        ExibirOpcoesMenu();
+    }
 }
 
 ExibirLogo();
