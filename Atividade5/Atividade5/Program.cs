@@ -23,8 +23,7 @@ foreach (var aluno in notaAlunos)
 
     string mediaFormat = media.ToString("F2");
 
-    Console.WriteLine($"A média das notas do {aluno.Key} é de: {mediaFormat}." );
-    Console.Clear();
+    Console.WriteLine($"A média das notas do {aluno.Key} é de: {mediaFormat}.");
 }
 
 Dictionary<string, int> estoque = new Dictionary<string, int>
@@ -36,6 +35,13 @@ Dictionary<string, int> estoque = new Dictionary<string, int>
     {"Tênis", 100 },
 
 };
+
+Console.WriteLine("Produtos disponíveis em estoque:");
+foreach (var produto in estoque.Keys)
+{
+    Console.WriteLine($"- {produto}");
+}
+
 Console.WriteLine("Digite o produto que você deseja e veja sua quantidade em estoque: ");
     string usuario = Console.ReadLine()!;
 
@@ -47,3 +53,39 @@ else
 {
     Console.WriteLine($"{usuario} não encontrado. Digite novamente.");
 }
+
+Dictionary<string, string> quiz = new Dictionary<string, string>
+{
+    {"Quantos mundiais tem o São Paulo Futebol Clube? ", "3"},
+    {"Quantos gols o Rogério Ceni tem na carreira? ", "131"},
+    {"Quantas libertadores o São Paulo Futebol Clube tem?", "3" },
+
+};
+
+int pontuacao = 0;
+
+Console.WriteLine("Perguntas: ");
+foreach (var perguntas in quiz.Keys)
+{
+    Console.WriteLine($"- {perguntas}");
+}
+
+foreach (var pergunta in quiz)
+{
+    Console.Write("Digite sua resposta: ");
+    string resposta = Console.ReadLine()!;
+
+    if (resposta.ToLower() == pergunta.Value.ToLower())
+    {
+        Console.WriteLine("Correto!\n");
+        pontuacao++;
+
+    }
+    else
+    {
+        Console.WriteLine($"Resposta incorreta! A resposta é {pergunta.Value}\n");
+    }
+}
+
+Console.WriteLine($"Pontuação final: {pontuacao} de {quiz.Count}");
+
