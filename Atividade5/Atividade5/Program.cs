@@ -5,3 +5,23 @@
 // 3 - Crie um programa que implemente um quiz simples de perguntas e respostas. Utilize um dicionário para armazenar as perguntas e as respostas corretas.
 
 // 4 - Criar um programa que simule um sistema de login utilizando um dicionário para armazenar nomes de usuário e senhas.
+
+
+Dictionary<string, List<double>> notaAlunos = new Dictionary<string, List<double>>();
+notaAlunos["Tiago"] =  new List<double> {8.5, 10, 9.5 };
+notaAlunos["Lionel Messi"] = new List<double> { 10, 10, 10 };
+
+foreach (var aluno in notaAlunos)
+{
+    double soma = 0;
+    for(int i = 0; i < aluno.Value.Count; i++)
+    {
+        soma += aluno.Value[i];
+    }
+
+    double media = soma / aluno.Value.Count;
+
+    string mediaFormat = media.ToString("F2");
+
+    Console.WriteLine($"A média das notas do {aluno.Key} é de: {mediaFormat}." );
+}
