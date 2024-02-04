@@ -24,4 +24,26 @@ foreach (var aluno in notaAlunos)
     string mediaFormat = media.ToString("F2");
 
     Console.WriteLine($"A média das notas do {aluno.Key} é de: {mediaFormat}." );
+    Console.Clear();
+}
+
+Dictionary<string, int> estoque = new Dictionary<string, int>
+{
+    
+    {"Camisetas", 50 },
+    {"Calças", 40 },
+    {"Bermuda", 25 },
+    {"Tênis", 100 },
+
+};
+Console.WriteLine("Digite o produto que você deseja e veja sua quantidade em estoque: ");
+    string usuario = Console.ReadLine()!;
+
+if (estoque.ContainsKey(usuario))
+{
+    Console.WriteLine($"Quantidade em estoque de {usuario}: {estoque[usuario]} unidades.");
+}
+else
+{
+    Console.WriteLine($"{usuario} não encontrado. Digite novamente.");
 }
