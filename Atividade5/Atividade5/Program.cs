@@ -89,3 +89,24 @@ foreach (var pergunta in quiz)
 
 Console.WriteLine($"Pontuação final: {pontuacao} de {quiz.Count}");
 
+Dictionary<string, string> sistemaDeLogin = new Dictionary<string, string>
+{
+    { "user123", "12345" },
+    {"tiago", "6789" },
+
+};
+
+Console.Write("Digite seu nome de usuário: ");
+string login = Console.ReadLine()!;
+Console.Write("Digite sua senha de login: ");
+string senha = Console.ReadLine()!;
+
+if(sistemaDeLogin.ContainsKey(login) && sistemaDeLogin[login] == senha)
+{
+    Console.WriteLine("Login bem-sucedido!");
+}
+else
+{
+    Console.WriteLine("Usuário ou senha incorretos.");
+}
+
